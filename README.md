@@ -68,6 +68,7 @@ python chatbot.py
 
 ### Folder Structure
 assignment/
+
 │
 
 ├── documents/          Put all your PDF datasheets here
@@ -112,6 +113,7 @@ Answer: SA-516 GR 70N with SS 316 L cladding
 You: What pump is used for LPG recycle?
 
 Answer: P-1203 A/B
+
 
 
 
