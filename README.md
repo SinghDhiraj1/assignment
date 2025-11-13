@@ -29,8 +29,18 @@ This tool lets you **ask questions in natural human language** and get **exact a
 ---
 
 ### How to Run (Step-by-Step – Anyone Can Do It!)
-
-1. **Download this project** (all files in one folder)
+1. Get the Project Files
+   You have two options to get the code.
+   **Option A: Download ZIP (Easiest)**
+   1.  Go to `https://github.com/SinghDhiraj1/assignment`
+   2.  Click the green **`<> Code`** button.
+   3.  Select **Download ZIP** and unzip the folder.
+   
+   **Option B: Use Git (For Developers)**
+   ```bash
+   git clone [https://github.com/SinghDhiraj1/assignment.git](https://github.com/SinghDhiraj1/assignment.git)
+   cd assignment
+   ```
 2. Put your PDF files inside the `documents/` folder  
    (Example: `T70-C-0102.pdf`, `P-1203 A_B.pdf`, etc.)
 3. Open **PowerShell** (or Command Prompt) in this folder
@@ -113,6 +123,7 @@ Answer: SA-516 GR 70N with SS 316 L cladding
 You: What pump is used for LPG recycle?
 
 Answer: P-1203 A/B
+
 
 
 
