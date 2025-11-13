@@ -1,7 +1,6 @@
 # PDF RAG Chatbot – Ask Questions to Your Technical Datasheets  
 **"Just type a question → Get exact answer from your PDFs"**
 
-![Chatbot Demo](https://via.placeholder.com/800x400?text=Ask+Anything+About+Your+Equipment!)  
 *Example: “Maximum operating temperature of T70-C-0102?” → Answer: 280 °F*
 
 ---
@@ -89,4 +88,5 @@ You: Shell material of T70-C-0102?
 Answer: SA-516 GR 70N with SS 316 L cladding
 
 You: What pump is used for LPG recycle?
+
 Answer: P-1203 A/B
