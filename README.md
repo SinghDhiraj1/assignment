@@ -5,11 +5,11 @@
 
 ---
 
-### What Does This Do? (Simple English)
+### What Does This Do?
 
 You have **PDF datasheets** (like equipment specs, pump data, vessel drawings).  
 They are **scanned images**, not searchable text.  
-This tool lets you **ask questions in English** and get **exact answers** directly from those PDFs.
+This tool lets you **ask questions in natural human language** and get **exact answers** directly from those PDFs.
 
 **Examples that work perfectly:**
 - “Maximum operating temperature of T70-C-0102?” → **280 °F**  
@@ -90,3 +90,4 @@ Answer: SA-516 GR 70N with SS 316 L cladding
 You: What pump is used for LPG recycle?
 
 Answer: P-1203 A/B
+
