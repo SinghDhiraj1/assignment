@@ -59,15 +59,15 @@ python chatbot.py
 ### Folder Structure
 assignment/
 │
-├── documents/              Put all your PDF datasheets here
-├── vector_store/           Auto-created (don't touch)
-├── .env                    Your secret API key
-├── config.py               Settings (already perfect)
-├── ingest.py               Creates smart index from PDFs
-├── query_engine.py         The brain that answers questions
-├── chatbot.py              Chat interface
-├── requirements.txt        All needed libraries
-└── README.md               This file
+├── documents/          Put all your PDF datasheets here
+├── vector_store/       Auto-created (don't touch)
+├── .env                Your secret API key
+├── config.py           Settings (already perfect)
+├── ingest.py           Creates smart index from PDFs
+├── query_engine.py     The brain that answers questions
+├── chatbot.py          Chat interface
+├── requirements.txt    All needed libraries
+└── README.md           This file
 
 ### Tech Stack
 | Component | Tool Used | Why Chosen |
@@ -90,4 +90,5 @@ Answer: SA-516 GR 70N with SS 316 L cladding
 You: What pump is used for LPG recycle?
 
 Answer: P-1203 A/B
+
 
