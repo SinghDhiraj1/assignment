@@ -37,47 +37,69 @@ This tool lets you **ask questions in natural human language** and get **exact a
 4. Run these 3 commands **exactly**:
 
 ```powershell
+# Create the virtual environment
 python -m venv venv
+
+# Activate the environment
+# On Windows (PowerShell/CMD):
 .\venv\Scripts\activate
+
+# On macOS/Linux (Bash/Zsh):
+source venv/bin/activate
+```
+5. Install the required libraries:
+```
 pip install -r requirements.txt
 ```
-5. Create a file named .env in the same folder with this content:
+6. Create a file named .env in the same folder with this content:
 ```
 OPENROUTER_API_KEY=sk-or-v1-your-key-here
 HTTP_REFERER=https://github.com
 ```
-6. Run the magic:
+7. Run the magic:
 
 ```
 python ingest.py
 python chatbot.py
 ```
-7. Type your question → Press Enter → Get instant answer!
+8. Type your question → Press Enter → Get instant answer!
 
 ---
 
 ### Folder Structure
 assignment/
 │
+
 ├── documents/          Put all your PDF datasheets here
+
 ├── vector_store/       Auto-created (don't touch)
+
 ├── .env                Your secret API key
+
 ├── config.py           Settings (already perfect)
+
 ├── ingest.py           Creates smart index from PDFs
+
 ├── query_engine.py     The brain that answers questions
+
 ├── chatbot.py          Chat interface
+
 ├── requirements.txt    All needed libraries
+
 └── README.md           This file
 
-### Tech Stack
+### Design Approach & Tech Stack
+
+This project uses a specific, modern RAG stack chosen for reliability and performance on technical datasheets. The "Why Chosen" column explains the key implementation choices.
+
 | Component | Tool Used | Why Chosen |
 | :--- | :--- | :--- |
-| PDF Reading | PyMuPDFLoader | Best for scanned technical PDFs |
-| Text Splitting | RecursiveCharacterTextSplitter | Preserves table structure |
-| Vector Database | FAISS (with numpy 1.26.4 fix) | "Fast, local, reliable" |
-| Embeddings | snowflake/snowflake-arctic-embed-m | #1 free embedding model 2025 |
-| LLM (Answer Engine) | anthropic/claude-3-haiku via OpenRouter | Best at reading tables & specs |
-| Framework | LangChain 0.2.14 | "Stable, mature, no breaking changes" |
+| PDF Reading | PyMuPDFLoader | Best for scanned technical PDFs; avoids OCR errors. |
+| Text Splitting | RecursiveCharacterTextSplitter | Preserves table structure during chunking. |
+| Vector Database | FAISS (with numpy 1.26.4 fix) | Fast, local, and reliable for high-speed search. |
+| Embeddings | `snowflake/snowflake-arctic-embed-m` | #1 free embedding model (as of 2025) for finding exact table rows. |
+| LLM (Answer Engine) | `anthropic/claude-3-haiku` | Best-in-class at understanding and reading tables & specs. |
+| Framework | LangChain 0.2.14 | Stable, mature, and has no breaking changes. |
 
 ### Tested & Working Answers (Real Output)
 
@@ -90,5 +112,6 @@ Answer: SA-516 GR 70N with SS 316 L cladding
 You: What pump is used for LPG recycle?
 
 Answer: P-1203 A/B
+
 
 
